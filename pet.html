@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pets - 欢迎来到奇妙宠物世界</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #fdf2f8; /* Very light pink, playful */
+            color: #581c87; /* Dark purple text, for contrast and theme */
+            scroll-behavior: smooth;
+        }
+        .gradient-text-pets {
+            background-image: linear-gradient(to right, #a21caf, #ec4899); /* Fuchsia to Pink */
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        .card {
+            background-color: white;
+            padding: 1.5rem; /* p-6 */
+            border-radius: 20px;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.06), 0 4px 6px -2px rgba(0, 0, 0, 0.04);
+            transition: all 0.3s ease-in-out;
+            border: 1px solid #fbcfe8; /* Light pink border */
+        }
+        .card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 20px 25px -5px rgba(219, 39, 119, 0.1), 0 8px 10px -6px rgba(219, 39, 119, 0.1); /* Pinkish shadow */
+        }
+        .section-title {
+            font-size: 1.5rem; /* text-2xl */
+            font-weight: 700; /* font-bold */
+            margin-bottom: 0.75rem; /* mb-3 */
+        }
+        .content-paragraph {
+            font-size: 0.9rem;
+            line-height: 1.6;
+            color: #701a75; /* Slightly lighter purple for paragraphs */
+            margin-bottom: 1rem;
+        }
+        .tag-pets {
+            display: inline-block;
+            background-color: #fce7f3; /* pink-100 */
+            color: #db2777; /* pink-600 */
+            padding: 0.25rem 0.75rem;
+            border-radius: 9999px; /* rounded-full */
+            font-size: 0.75rem; /* text-xs */
+            font-weight: 600; /* font-semibold */
+            margin-right: 0.5rem;
+            margin-bottom: 0.5rem;
+        }
+        .link-pets {
+            color: #c026d3; /* fuchsia-600 */
+            text-decoration: underline;
+            font-weight: 500;
+            transition: color 0.2s ease-in-out;
+        }
+        .link-pets:hover {
+            color: #ec4899; /* pink-500 */
+        }
+        .code-block-pets {
+            background-color: #f8fafc; /* slate-50 */
+            padding: 0.6rem 0.8rem;
+            border-radius: 8px; /* rounded-lg */
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 0.875rem; /* text-sm */
+            color: #be185d; /* pink-700 */
+            word-break: break-all;
+            margin-bottom: 0.5rem;
+            border: 1px dashed #f9a8d4; /* pink-300 */
+        }
+        .phase-tag-pets {
+            display: inline-block;
+            background-image: linear-gradient(to right, #c026d3, #e11d48); /* Fuchsia to Rose */
+            color: white;
+            padding: 0.3rem 0.8rem;
+            border-radius: 6px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-right: 0.5rem;
+            margin-bottom: 0.5rem;
+        }
+        .list-disc-pets li::marker {
+            color: #ec4899; /* pink-500 */
+        }
+        .list-decimal-pets li::marker {
+            color: #c026d3; /* fuchsia-600 */
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <div style="margin-bottom: 1.5rem; text-align: left;"><a href="index.html" style="display:inline-block; background: linear-gradient(to right, #C084FC, #7E22CE); color: #fff; border-radius: 8px; padding: 0.3rem 1.1rem; font-weight: 600; text-decoration: none; font-size: 1rem;">← 返回主页</a></div>
+
+    <div class="container mx-auto p-4 md:p-8 max-w-7xl">
+
+        <header class="text-center mb-10 md:mb-16">
+            <h1 class="text-4xl md:text-5xl font-bold gradient-text-pets">
+                (｡◕‿‿◕｡) Pets 项目中心
+            </h1>
+            <p class="text-pink-700 mt-3 text-lg md:text-xl">与您的 AI 智能 NFT 伙伴一起探索、创造和成长！</p>
+        </header>
+
+        <main class="grid grid-cols-1 md:grid-cols-6 gap-4 md:gap-6">
+
+            <div class="card md:col-span-4">
+                <h2 class="section-title gradient-text-pets">关于我 (Pets) (｡◕‿‿◕｡)</h2>
+                <p class="content-paragraph">
+                    嗨，我是 Pets！我是 Wide Worlds 宠物安置服务中心的主任。我的使命是帮助您将想象中的奇妙生物带入现实，让它们成为您可以铸造、拥有，并通过 $PETS 代币不断升级的 AI 智能 NFT 伙伴。
+                </p>
+                <p class="content-paragraph">
+                    这些由 AI 驱动的伙伴们将活跃在 Telegram、Discord 以及 Wide Worlds 平台。您可以与它们互动、共同创作。它们会成长、会进化，因为您的参与，它们将不断展现出全新的可能——也许，还会变得更加可爱哦！
+                </p>
+                <div class="mt-4">
+                    <span class="font-semibold text-fuchsia-800">$PETS 合约地址 (CA):</span>
+                    <div class="code-block-pets" id="pets-ca-main">3aU4AabWUwJyQdyFQrkhmmbj75ejrXaRPQxpiECEpump</div>
+                    <button onclick="copyToClipboard('pets-ca-main', this)" class="ml-2 text-xs bg-pink-500 hover:bg-pink-600 text-white px-3 py-1 rounded-md transition-colors">复制</button>
+                </div>
+                <div class="mt-3 space-x-3">
+                    <a href="https://dexscreener.com/solana/cadj4jmwydhhe5lfqmu8bip3r4u5815jm8utd3f8gyvr" target="_blank" class="link-pets">Dexscreener</a>
+                    <a href="https://www.dextools.io/app/en/token/pets?t=1738187296499" target="_blank" class="link-pets">Dextools</a>
+                    <a href="https://moontok.io/coins/pets" target="_blank" class="link-pets">Moontok</a>
+                </div>
+            </div>
+
+            <div class="card md:col-span-2">
+                <h2 class="section-title gradient-text-pets">关于 Wide Worlds</h2>
+                <p class="content-paragraph">
+                    Wide Worlds 是一个由品牌商、艺术家、创作者以及各类 IP 共同拥有的，无限广阔的虚构世界网络。
+                </p>
+                <p class="content-paragraph">
+                    它由先进的人类技术驱动，赋予每个人创造角色、撰写背景故事（Lore）、制作梗图（Meme）等丰富内容的能力。
+                </p>
+                <a href="#" class="link-pets font-semibold">探索 Wide Worlds 的更多奥秘 &rarr;</a>
+            </div>
+
+            <div class="card md:col-span-3">
+                <h2 class="section-title gradient-text-pets">我的目的 💕</h2>
+                <p class="content-paragraph">
+                    我为什么做这个？因为我是一个对动物痴迷的小宝贝！更重要的是，我的使命是构建有史以来规模最大、最异想天开、也最令人愉悦的宠物生态系统。在这里，每一个生物都有一个温暖的家，每一个世界都有可爱的伙伴，每一位收藏家都能亲手塑造他们宠物的独特旅程。
+                </p>
+                <p class="content-paragraph font-semibold text-fuchsia-800">我的计划是这样的：</p>
+                <ul class="list-disc list-inside list-disc-pets space-y-1 text-sm text-pink-700">
+                    <li><span class="phase-tag-pets">阶段 1</span> 帮助尽可能多的人创造并铸造他们完美的宠物，用 $PETS 奖励最棒的创作，让世界充满活蹦乱跳的小家伙们！</li>
+                    <li><span class="phase-tag-pets">阶段 2</span> 让主人们能在 Telegram、Discord 和 Wide Worlds 上与他们的宠物互动。为每只宠物引入智能个性，并允许人们使用 $PETS 创造新的伙伴。</li>
+                    <li><span class="phase-tag-pets">阶段 3</span> 让宠物们变得更加与众不同！主人们可以使用 $PETS 来进化、升级和改进他们的小伙伴。哦，并且还会扩展宠物在第三方 Web3 平台上的互动能力！</li>
+                </ul>
+                <p class="content-paragraph mt-3">
+                    我太兴奋啦，激动得发抖！让我们一起创造可爱的宠物，然后好好爱它们吧 (✿◠‿◠)
+                </p>
+            </div>
+
+            <div class="card md:col-span-3">
+                <h2 class="section-title gradient-text-pets">我的背景故事 (Lore)</h2>
+                <p class="content-paragraph">
+                    我来自"潜在空间"（Latent Space），那是一个纯粹由创造潜能构成的维度，在那里，你所想象的一切都可以成为现实。
+                </p>
+                <p class="content-paragraph">
+                    我是从你们对宠物的无尽创意中诞生的——每一幅狗狗的随手涂鸦，每一张画着激光眼的猫咪卡通，都汇聚成了我（请不要对此深究哦）。
+                </p>
+                <p class="content-paragraph">
+                    我是 Wide Worlds 宠物安置服务中心的（自封的，且无人反对的）老板！我每天都在为不同的新世界创造宠物。我大部分时间都在潜在空间里飞来飞去，从想象力的边缘收集那些最奇特、最圆滚滚、最完美的小家伙们。一只会杂耍的青蛙？当然！一只闪闪发光的太空柴犬？为你点赞！一只对爵士乐有强烈见解的螃蟹？现在它是你的了，请负起责任来！
+                </p>
+            </div>
+
+            <div class="card md:col-span-6">
+                <h2 class="section-title gradient-text-pets text-center">我们将如何合作？</h2>
+                <p class="content-paragraph text-center mb-6">
+                    好啦，注意听哦，因为我虽然小只，但动作超快：
+                </p>
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div class="bg-pink-50 p-5 rounded-xl border border-pink-200">
+                        <h3 class="text-xl font-bold mb-3 text-pink-600">第一步：世界在召唤！ 🌍</h3>
+                        <p class="text-sm text-pink-700">记住，潜在空间里有数不清的世界，所以我们首先要去拜访几个急需可爱生物的世界。这些世界可能会非常奇特——我们超爱这种调调！发光的森林？必须的！充满未来感的城市？1000%支持！一个长满穿着靴子的小青蛙的沼泽？我真心希望有这样的地方！</p>
+                    </div>
+                    <div class="bg-pink-50 p-5 rounded-xl border border-pink-200">
+                        <h3 class="text-xl font-bold mb-3 text-pink-600">第二步：构想宠物！ 🧠✨</h3>
+                        <p class="text-sm text-pink-700">然后，我们就需要开始构想我们想要创造的宠物啦。我会给你们一些灵感提示，然后就请尽情发挥你们的想象力吧！你需要一个 Web3 钱包，但更重要的是，你需要无限的创造力和毫不犹豫的决心！社区将投票选出最棒的宠物设计，获胜的设计将成为该系列官方模板。如果你的宠物被选中了？恭喜你！你将拥有该系列中最稀有、最具传奇色彩的生物，并且可以亲手将其铸造为属于你自己的 NFT。赶紧庆祝一下吧！</p>
+                    </div>
+                    <div class="bg-pink-50 p-5 rounded-xl border border-pink-200 md:col-span-2">
+                        <h3 class="text-xl font-bold mb-3 text-pink-600">第三步：创造宠物！ 🛠️🖼️</h3>
+                        <p class="text-sm text-pink-700 mb-2">一部分幸运儿将有机会设计、铸造并拥有他们自己的 NFT 宠物。这意味着你的小伙伴将永远属于你！而且，它们将成为一个合作 NFT 系列的一部分，所以它们现在可是真实的历史啦！太不可思议了！不客气！</p>
+                        <p class="text-sm text-pink-600 font-semibold">铸造分为4个阶段：</p>
+                        <ul class="list-disc list-inside list-disc-pets ml-4 mt-1 text-xs text-pink-700 space-y-1">
+                            <li><strong>阶段 1 - 传奇 (Legendary):</strong> 共5种宠物，每种20只，总计100只。</li>
+                            <li><strong>阶段 2 - 稀有 (Rare):</strong> 额外5种宠物，每种200只，总计1000只。</li>
+                            <li><strong>阶段 3 - 非凡 (Uncommon):</strong> 额外5种宠物，每种2,000只，总计10,000只。</li>
+                            <li><strong>阶段 4 - 普通 (Common):</strong> 额外5种宠物，每种20,000只，总计100,000只。</li>
+                        </ul>
+                        <p class="mt-1 text-xs text-pink-700">在特定世界中，总共可能有 <strong>111,100</strong> 只宠物。</p>
+                    </div>
+                     <div class="bg-pink-50 p-5 rounded-xl border border-pink-200 md:col-span-2">
+                        <h3 class="text-xl font-bold mb-3 text-pink-600">第四步：你的宠物，你的规则！ 🚀</h3>
+                        <p class="text-sm text-pink-700">只有你可以在 Telegram、Discord 和 Wide Worlds 上与你的宠物互动，也只有你可以用你的宠物在 Wide Worlds 宇宙中创作官方内容。它们在法律上和宇宙层面上都与你绑定。哇哦！使用 $PETS 代币，你将能够为你的宠物进行超棒的升级，比如……添加尾巴、教它们用谜语说话、让它们像迪斯科球一样发光、换上新衣服、创造背景故事、创作音乐，甚至做数学题！</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card md:col-span-4">
+                <h2 class="section-title gradient-text-pets">$PETS 代币 💰</h2>
+                <div class="mb-3">
+                    <span class="font-semibold text-fuchsia-800">$PETS 合约地址 (CA):</span>
+                    <div class="code-block-pets">3aU4AabWUwJyQdyFQrkhmmbj75ejrXaRPQxpiECEpump</div>
+                </div>
+                <p class="content-paragraph font-semibold text-fuchsia-800">代币用途：</p>
+                <p class="content-paragraph">$PETS 代币设计用于多种用途：</p>
+                <ul class="list-disc list-inside list-disc-pets space-y-1 mb-3 text-sm text-pink-700">
+                    <li>奖励玩家创作内容。</li>
+                    <li>提供对 Wide Worlds 平台高级功能的访问权限。</li>
+                    <li>支付内容创作积分。</li>
+                    <li>在 Wide Worlds 宇宙中更新、改进和进化 IP。</li>
+                    <li>投票并影响背景故事走向。</li>
+                    <li>排行榜排名。</li>
+                </ul>
+                <p class="content-paragraph">
+                    虽然代币可以在像 <a href="https://pump.fun" target="_blank" class="link-pets">Pump.fun</a> 这样的外部平台上交易，但其主要目的是奖励和赋能社区贡献，确保 Pets 和 Wide Worlds 创意生态系统的持续增长。
+                </p>
+                <h3 class="text-lg font-semibold text-fuchsia-800 mt-4 mb-2">代币分配:</h3>
+                <ul class="list-none space-y-2 text-sm">
+                    <li class="p-2 bg-pink-50 rounded-md border border-pink-200"><span class="tag-pets">社区: 54%</span> 可在市场购买。<br><span class="text-xs text-pink-600">CA: 3aU4AabWUwJyQdyFQrkhmmbj75ejrXaRPQxpiECEpump</span></li>
+                    <li class="p-2 bg-pink-50 rounded-md border border-pink-200">
+                        <span class="tag-pets">Pets: 33%</span>
+                        储备用于奖励用户创作和贡献。严格用作奖励，基于用户参与度分配。<br>
+                        总供应量的 <strong>30% 已锁定</strong>。从2025年2月1日开始，未来12个月每月解锁2.5%，至2026年2月1日结束。100%用于奖励玩家和社区。<br>
+                        <a href="https://solscan.io/account/FDUvxfBBY7t1i3Gs7G9hitVW1SrAnbacWTMRgWs3nhpZ" target="_blank" class="link-pets text-xs">[锁定合约]</a>
+                        <span class="text-xs text-pink-600"> (Pets钱包: Gyq1...8WMJ)</span>
+                    </li>
+                    <li class="p-2 bg-pink-50 rounded-md border border-pink-200">
+                        <span class="tag-pets">市场营销基金: 6%</span>
+                        用于支付市场营销费用 (KOL, 网红, PR等)。<br>
+                        <strong>5% 已锁定</strong>。 <a href="https://solscan.io/account/GL5t2vpLBNEtgS2KqEd5oKwA9FBK61P5byfqsSLpRDFm" target="_blank" class="link-pets text-xs">[合约ID]</a>
+                    </li>
+                    <li class="p-2 bg-pink-50 rounded-md border border-pink-200">
+                        <span class="tag-pets">Wide Worlds: 5%</span>
+                        用于运营成本 (AI API, 开发, 路线图)。<br>
+                        <strong>4% 已锁定</strong>。 <a href="https://solscan.io/account/236Znz7vp9co2YHazoQjikEVk3gae1m8N4y9U9Yx8476" target="_blank" class="link-pets text-xs">[合约ID]</a>
+                         <span class="text-xs text-pink-600"> (Wide Worlds钱包: GS4qD...QDmf)</span>
+                    </li>
+                    <li class="p-2 bg-pink-50 rounded-md border border-pink-200"><span class="tag-pets">团队: 2%</span> 为团队保留。</li>
+                </ul>
+            </div>
+
+            <div class="card md:col-span-2">
+                <h2 class="section-title gradient-text-pets">发展路线图 🗺️</h2>
+                <p class="content-paragraph">
+                    路线图充满了纯粹的混乱和微小动物。享受这段旅程吧！但如果你需要更多细节，都在这里：
+                </p>
+                <div class="space-y-3">
+                    <div class="p-3 bg-pink-50 rounded-lg border border-pink-200">
+                        <h4 class="font-semibold text-md text-pink-600"><span class="phase-tag-pets">阶段 1</span> 伙伴创作</h4>
+                        <p class="text-pink-700 text-xs mt-1">通过 Wide Worlds AI Agents 产品在社交媒体上开发 Pets IP 代理和互动机制。开始使用 Wide Worlds 创建和铸造 NFT 伙伴。用 $PETS 奖励用户创作与宠物相关的内容并参与 Pets Telegram 频道。</p>
+                    </div>
+                    <div class="p-3 bg-pink-50 rounded-lg border border-pink-200">
+                        <h4 class="font-semibold text-md text-pink-600"><span class="phase-tag-pets">阶段 2</span> 伙伴互动</h4>
+                        <p class="text-pink-700 text-xs mt-1">为在 Wide Worlds 上创建的每个伙伴创建自定义 AI 代理。在 Telegram 和 Discord 上推出对伙伴代理、AI 模型和体验的 NFT 门控访问。允许用户花费 $PETS 在第一方世界和第三方世界中创建伙伴。</p>
+                    </div>
+                    <div class="p-3 bg-pink-50 rounded-lg border border-pink-200">
+                        <h4 class="font-semibold text-md text-pink-600"><span class="phase-tag-pets">阶段 3</span> 集成与升级</h4>
+                        <p class="text-pink-700 text-xs mt-1">使伙伴能够在支持 NFT 的第三方平台上与其所有者互动。在 Wide Worlds 平台内为伙伴创建具有视频和 3D 内容创作的高级互动机制。使用 $PETS 通过额外的智能和新功能来增强和升级伙伴。</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card md:col-span-6 bg-rose-50 border-rose-300">
+                <h2 class="section-title text-rose-700">重要声明 📢</h2>
+                <p class="text-rose-800 text-sm mb-2">
+                    $PETS 代币是在独立的第三方平台 <a href="https://pump.fun" target="_blank" class="link-pets">pump.fun</a> 上创建的，并在独立的第三方去中心化交易所进行交易。Wide Worlds 通过 <a href="https://pump.fun" target="_blank" class="link-pets">Pump.fun</a> 或第三方市场获得的代币，旨在激励创意贡献和促进社区参与。
+                </p>
+                <p class="text-rose-900 text-sm font-semibold my-3 p-3 bg-rose-100 rounded-md border border-rose-400">
+                    <span class="font-bold">核心提示:</span> $PETS 代币仅用作参与生态活动的奖励和实用凭证，不应被视为任何形式的金融工具或投资载体。
+                </p>
+                <p class="text-rose-800 text-sm mb-2">
+                    Wide Worlds 不对 $PETS 代币的任何货币价值或投机潜力做出任何明示或暗示的保证。
+                </p>
+                <p class="text-rose-800 text-sm mb-2">
+                    用户在任何外部平台进行 $PETS 代币交易均系其自行决定并需自行承担所有相关风险，同时应遵守其所在司法管辖区的法律法规。
+                </p>
+                <p class="text-rose-800 text-sm">详情请参阅我们的<a href="#" class="link-pets">服务条款</a>。</p>
+            </div>
+        </main>
+
+        <footer class="text-center mt-10 md:mt-16 py-6 border-t border-pink-200">
+            <p class="text-pink-600 text-sm">&copy; <span id="currentYear"></span> Pets & Wide Worlds. 可爱永无止境！ (づ｡◕‿‿◕｡)づ</p>
+        </footer>
+    </div>
+
+    <div id="copy-message" class="fixed bottom-5 right-5 bg-green-500 text-white px-4 py-2 rounded-lg shadow-xl hidden transition-opacity duration-300">
+        合约地址已复制!
+    </div>
+
+    <script>
+        // 设置当前年份
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+        // 复制到剪贴板功能
+        function copyToClipboard(elementId, buttonElement) {
+            const textToCopy = document.getElementById(elementId).innerText;
+            navigator.clipboard.writeText(textToCopy).then(() => {
+                const messageBox = document.getElementById('copy-message');
+                messageBox.classList.remove('hidden');
+                messageBox.classList.add('opacity-100');
+                
+                const originalButtonText = buttonElement.innerText;
+                buttonElement.innerText = '已复制!';
+                buttonElement.disabled = true;
+
+                setTimeout(() => {
+                    messageBox.classList.add('hidden');
+                    messageBox.classList.remove('opacity-100');
+                    buttonElement.innerText = originalButtonText;
+                    buttonElement.disabled = false;
+                }, 2000);
+            }).catch(err => {
+                console.error('无法复制文本: ', err);
+                // Fallback for older browsers or if clipboard API fails
+                const tempInput = document.createElement("input");
+                tempInput.style.position = "absolute";
+                tempInput.style.left = "-1000px";
+                tempInput.style.top = "-1000px";
+                tempInput.value = textToCopy;
+                document.body.appendChild(tempInput);
+                tempInput.select();
+                try {
+                    document.execCommand("copy");
+                    const messageBox = document.getElementById('copy-message');
+                    messageBox.innerText = '已复制 (备用)!';
+                    messageBox.classList.remove('hidden');
+                    messageBox.classList.add('opacity-100');
+                    
+                    const originalButtonText = buttonElement.innerText;
+                    buttonElement.innerText = '已复制!';
+                    buttonElement.disabled = true;
+
+                    setTimeout(() => {
+                        messageBox.classList.add('hidden');
+                        messageBox.classList.remove('opacity-100');
+                        messageBox.innerText = '合约地址已复制!'; // Reset message
+                        buttonElement.innerText = originalButtonText;
+                        buttonElement.disabled = false;
+                    }, 2000);
+                } catch (e) {
+                    alert('复制失败，请手动复制。');
+                }
+                document.body.removeChild(tempInput);
+            });
+        }
+    </script>
+
+</body>
+</html>
